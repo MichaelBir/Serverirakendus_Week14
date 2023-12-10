@@ -8,18 +8,13 @@ const app = express();
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requsted-With, Content-Type, Accept');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
-});
-
-app.use(express.json());
+  });
 
 app.use('/ingredients', ingredientRouter);
-
 app.use('/recipes', recipeRouter);
-
 app.use('/fullRecipes', fullRecipesRouter);
-
 app.use('/randomRecipes', randomRecipesRouter);
 
 app.listen(process.env.PORT || 3000, () => {
