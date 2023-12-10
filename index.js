@@ -5,7 +5,7 @@ getRandomRecipe();
 
 
 async function getRandomRecipe() {
-    const response = await fetch('https://week11-week111.onrender.com/random');
+    const response = await fetch('https://serverirakendus-14.onrender.com');
     const recipe = await response.json();
 
     const recipeName = recipe.recipe.recipename;
