@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 app.use('/ingredients', ingredientRouter);
 app.use('/recipes', recipeRouter);
 app.use('/fullRecipes', fullRecipesRouter);
-app.use('/random', randomRecipesRouter);
+app.use('/randomRecipe', randomRecipesRouter);
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('Server is listening port 3000')
